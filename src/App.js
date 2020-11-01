@@ -13,7 +13,13 @@ class App extends Component {
   }
 
   switchNameHandler = () => {
-    console.log("Was clicked");
+    // console.log("Was clicked");
+    // this.state.persons[0].name = "Maximillian"; DON'T DO THIS. React does not recognise this as a state change and the UI will not update
+    this.setState({persons: [
+      { name: 'Maximillian', age: 50 },
+      { name: 'Denise', age: 22 },
+      { name: 'Henry', age: 26 }
+    ]})
   }
 
   render() {
